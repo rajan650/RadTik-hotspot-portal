@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadTik High-Speed Hotspot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- ব্র্যান্ড লোগো বা নাম -->
+        <div class="brand-header">
+            <h1>RadTik</h1>
+            <p>হাই-স্পিড ওয়াই-ফাই জোন</p>
+        </div>
+
+        <!-- নোটিশ বোর্ড (অফার দেখার জন্য) -->
+        <div class="notice-board">
+            <h3>🔥 ধামাকা ইন্টারনেট অফার!</h3>
+            <ul>
+                <li>⏳ ১ ঘণ্টা স্পিড আনলিমিটেড — মাত্র ৫ টাকা</li>
+                <li>📅 ১ দিন আনলিমিটেড ব্রাউজিং — মাত্র ২০ টাকা</li>
+                <li>🚀 ৭ দিন সুপার-ফাস্ট ইন্টারনেট — মাত্র ১০০ টাকা</li>
+            </ul>
+            <p class="help-text">💡 ভাউচার কার্ডের জন্য যোগাযোগ করুন: <strong>01XXXXXXXXX</strong></p>
+        </div>
+
+        <!-- লগইন ফর্ম -->
+        <!-- দ্রষ্টব্য: মাইক্রোটিক রাউটার এই ফর্ম থেকে সরাসরি 'username' ডেটা রিসিভ করবে -->
+        <form name="login" action="http://192.168.88" method="post" onSubmit="return doLogin()">
+            <input type="hidden" name="dst" value="http://google.com">
+            <input type="hidden" name="popup" value="true">
+            
+            <div class="input-group">
+                <label for="voucher">আপনার ভাউচার কোডটি লিখুন:</label>
+                <input type="text" id="voucher" name="username" placeholder="এখানে কোড দিন (যেমন: RDTK-456)" required autocomplete="off">
+                <!-- পাসওয়ার্ড ফিল্ড লুকানো থাকে কারণ ভাউচার সিস্টেমে ইউজারনেমই পাসওয়ার্ড -->
+                <input type="hidden" name="password" id="password">
+            </div>
+
+            <button type="submit" class="login-btn">ইন্টারনেট অন করুন</button>
+        </form>
+
+        <div class="footer">
+            <p>&copy; 2026 RadTik Hotspot Network. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
